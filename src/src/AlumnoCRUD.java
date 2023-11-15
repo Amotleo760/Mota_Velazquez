@@ -65,6 +65,13 @@ public class AlumnoCRUD {
         escribirAlumnos(listaAlumno);
     }
 
+    public void mostrarTodos() {
+        ArrayList<Alumno> listaAlumnos = leerAlumnos();
+        for (Alumno a : listaAlumnos) System.out.println(a.getNombre() +
+                " " + a.getApellidos() + " " + a.getCurso());
+    }
+    
+
     public void altaAlumno(Alumno alumno) {
         ArrayList<Alumno> listaAlumno = leerAlumnos();
         listaAlumno.add(alumno);
